@@ -1,19 +1,23 @@
 package plugin.adventurerRPG;
 
 import java.util.Objects;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import plugin.adventurerRPG.commands.AcceptQuestCommandHandler;
-import plugin.adventurerRPG.commands.QuestStatusCommandHandler;
-import plugin.adventurerRPG.commands.SubmitQuestCommandHandler;
-import plugin.adventurerRPG.commands.SummonNpcCommandHandler;
+import plugin.adventurerRPG.commands.GameStart;
+import plugin.adventurerRPG.commands.QuestStatus;
+import plugin.adventurerRPG.commands.VisitNpc;
 
 public class Main extends JavaPlugin {
+
     @Override
     public void onEnable() {
-        Objects.requireNonNull(getCommand("quest status")).setExecutor(new QuestStatusCommandHandler());
-        Objects.requireNonNull(getCommand("accept quest")).setExecutor(new AcceptQuestCommandHandler());
-        Objects.requireNonNull(getCommand("submit quest")).setExecutor(new SubmitQuestCommandHandler());
-        Objects.requireNonNull(getCommand("summons")).setExecutor(new SummonNpcCommandHandler());
+        GameStart gameStart = new GameStart(this);
+        Bukkit.getPluginManager().registerEvents(gameStart, this);
+        Objects.requireNonNull(getCommand("gameStart")).setExecutor(gameStart);
+        Objects.requireNonNull(getCommand("questStatus")).setExecutor(new QuestStatus());
+        Objects.requireNonNull(getCommand("visitNpc")).setExecutor(new VisitNpc());
     }
+
 }
+
 

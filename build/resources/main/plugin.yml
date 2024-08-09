@@ -3,11 +3,6 @@ version: '1.0-SNAPSHOT'
 main: plugin.adventurerRPG.Main
 api-version: '1.21'
 commands:
-  ueststatus:
-    description: 現在のクエストの状況を表示
-  acceptquest:
-    description: クエストを受注
-  submitquest:
-    description: クエストクリア
-  summonNpc:
-    description: NPCを召喚する
+  gameStart:
+  questStatus:
+  visitNpc:

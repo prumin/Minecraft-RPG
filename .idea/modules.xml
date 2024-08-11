@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdventurerRPG.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdventurerRPG.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdventurerRPG.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdventurerRPG.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin.AdventurerRPG.test.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin.AdventurerRPG.test.iml" />
     </modules>
   </component>
 </project>
